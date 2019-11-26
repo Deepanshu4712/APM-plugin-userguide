@@ -6,7 +6,7 @@ SnappyFlow APM plugin on-boarding user guide
 ### Prerequisites:
 1. Enable Response time in Apache access-logs as follows:
 
-    a) Edit the apache configuration file. 
+    1.1) Edit the apache configuration file. 
     
       For ubuntu :
       
@@ -16,11 +16,11 @@ SnappyFlow APM plugin on-boarding user guide
       
         sudo vi /etc/httpd/conf/httpd.conf
       
-   b) Search for "LogFormat" and add '%D' at the end of the LogFormat. After adding, the LogFormat should be similar to:
+   1.2) Search for "LogFormat" and add '%D' at the end of the LogFormat. After adding, the LogFormat should be similar to:
      
         LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %D" <customFormatName>
       
-   c) Save the file and restart the apache service.
+   1.3) Save the file and restart the apache service.
    
       For Ubuntu:
       
