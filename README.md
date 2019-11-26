@@ -1,9 +1,9 @@
 # APM-plugin-userguide
 SnappyFlow APM plugin on-boarding user guide
 
-Apache agent plugin
+## Apache agent plugin
 
-Prerequisites:
+### Prerequisites:
 1. Enable Response time in Apache access-logs as follows:
 
     a) Edit the apache configuration file. 
