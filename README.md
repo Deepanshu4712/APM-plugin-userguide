@@ -30,5 +30,30 @@ SnappyFlow APM plugin on-boarding user guide
       
         sudo service httpd restart
       
-  
+## Mongod agent plugin
+
+### Prerequisites:
+1. Create a dedicated read-only user to monitor the mongodb.
+
+    a) In the Mongo Shell login to admin database:
+          
+          use admin:
+          db.auth('username','UNIQUE_PASSWORD')
+    b) In Mongo version > 3.X use the createUser command. Provide read access to database which is need to be monitored
+           
+           db.createUser({
+                "user":"USERNAME",
+                "pwd": "<UNIQUEPASSWORD>",
+                "roles" : [
+                {role: 'read', db: 'admin' },
+                {role: 'clusterMonitor', db: 'admin'},
+                {role: 'read', db: 'local' }
+                ]
+                })
+    c) Authenticate with the created user Credentials and validate:
+            
+            db.auth('USERNAME','<UNIQUEPASSWORD>')
+            
+2. Provide this credentials in SnappyFlow APM to monitor your Mongod.
+       
      
