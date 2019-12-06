@@ -54,6 +54,10 @@ SnappyFlow APM plugin on-boarding user guide
             
             db.auth('USERNAME','<UNIQUEPASSWORD>')
             
+    d) Enable Profiler and set it to Level 1 for Slow Queries.Default slowms is 100ms.
+    
+            db.setProfilingLevel(1)
+            
 2. Provide this credentials in SnappyFlow APM to monitor your Mongod.
        
      
